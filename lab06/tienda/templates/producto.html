@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-lg-6">
+            <img class="img-fluid" src="http://placehold.it/700x400" alt="{{ producto.nombre }}">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="my-3">{{ producto.nombre }}</h1>
+            <h3 class="text-muted">S/ {{ producto.precio }}</h3>
+            <div class="my-3">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734; (0 Reseñas)</small>
+            </div>
+            <p class="my-3"><strong>Categoría:</strong> {{ producto.categoria.nombre }}</p>
+            <p class="my-3"><strong>Stock disponible:</strong> {{ producto.stock }}</p>
+            <div class="my-4">
+                <a href="#" class="btn btn-primary btn-lg">Agregar al carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
